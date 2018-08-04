@@ -1,6 +1,7 @@
 # A Doggy Discord Bot
 Example of how to make a Discord bot using theDogAPI.com in NodeJs. Simple app you can experiment with yourself.
 An issues hit me up - http://twitter.com/adenforshaw
+
 ![The Dog API packshot](docs/packshot.png)
 
 # Setup
@@ -18,3 +19,11 @@ An issues hit me up - http://twitter.com/adenforshaw
 
 # How does it work?
 ![Flow Diagram](docs/flow-diagram.png)
+- Once the app is connected to Discord it stays alive via a websocket connection
+- It listens to every message in the channel, 
+- when someone says 'woof' it makes a request to TheDogAPI for a random image
+- it the uses the 'url' and 'breed' values of the returned image, and sends it to the channel
+
+# Where next?
+- You could have the Bot 'always-on' by putting it on the cloud with the [AWS free tier using Elastic Beanstalk](https://aws.amazon.com/free/)
+- Expand more commands to send back different breed of dogs, or different categories.
